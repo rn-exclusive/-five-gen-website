@@ -285,3 +285,5 @@ header{position:relative;z-index:22}
 .gadgetTile a:hover{background:#142644;color:#f2d28d}
 .gadgetNote{margin:17px 0 0;padding:12px 15px;border-left:3px solid #c7a45b;background:#f7f8fa;color:#697586;font-size:12px;border-radius:0 8px 8px 0}
 @media(max-width:800px){.gadgetShowcase{margin:0 14px 48px;padding:10px 0}.gadgetGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gadgetTile{padding:14px 12px}.gadgetIcon{width:50px;height:50px;font-size:26px}}
+
+.gadgetStockOut{display:inline-flex;align-items:center;justify-content:center;margin-top:auto;padding:8px 12px;border:1px solid #e3b6b6;border-radius:8px;background:#fff0f0;color:#b42318;font-size:12px;font-weight:900;letter-spacing:.2px;cursor:not-allowed}
