@@ -1,33 +1,30 @@
-# FIVE GEN — Complete Website Starter
+# FIVE GEN — Professional E-commerce
 
-## Features
-- Responsive storefront (mobile/tablet/desktop)
-- Product search and category filters
-- Cart, quantity controls and checkout
-- WhatsApp order handoff to +8801805082863
-- Messenger contact link configurable in Admin Settings
-- Admin dashboard: overview, product CRUD, order list/status, settings
-- Bengali-first interface and language toggle
-- Local browser storage for demo data
+Production storefront for FIVE GEN, built with React, Vite and Supabase.
 
-## Run locally
-1. Install Node.js 20+.
-2. Extract this ZIP.
-3. Open the folder in Terminal.
-4. Run `npm install`
-5. Run `npm run dev`
-6. Open the local URL shown by Vite.
+## Current capabilities
+- Responsive Bengali-first storefront and product search/category filters
+- Supabase-backed product catalogue and admin authentication
+- Product image uploads, size options and product typography controls
+- Cart, stock-aware quantity controls and server-validated Cash on Delivery checkout
+- Atomic stock reservation/decrement during order creation
+- Admin order management, status updates and printable invoice
+- Persistent store settings and order status lookup using order ID + matching phone number
+- Wishlist currently stored locally in the customer's browser
+
+## Local development
+1. Install a supported Node.js LTS release.
+2. Install dependencies with the package manager and lockfile used by the project.
+3. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in a local .env file.
+4. Run npm run dev.
+5. Run npm run build before proposing a release.
 
 ## Admin
-Open `/#admin` or click Admin in the footer.
-Demo password: `FG2026`
-Change the demo password and implement server-side authentication before public launch.
+Open /#admin and sign in using the authorized Supabase Auth account. There is no demo password in the source code.
 
-## Important launch limitations
-This is a complete front-end starter, not a production-hosted store. Product and order data currently stay in the browser's Local Storage and are not shared between devices. The demo admin password is not secure. WhatsApp checkout opens a pre-filled message; it does not verify payment or automatically confirm delivery. bKash/Nagad require merchant onboarding and approved API credentials. Production launch requires a backend/database, secure admin authentication, payment provider integration, hosting/domain, product photos and verified store policies.
-
-## Before launch
-- Replace sample products with real products, prices and photos.
-- Add the real Facebook Messenger Page URL in Admin > Settings.
-- Set delivery charges, delivery areas, return/refund policy and contact details.
-- Connect a production backend and payment gateway.
+## Production notes
+- The public site uses Cash on Delivery. Online payment is not enabled until a merchant account and approved provider integration are configured.
+- Customer self-service registration/login is not yet implemented; order lookup currently uses the full order UUID and the phone number used at checkout.
+- Delivery charges can be configured in Admin Settings; displaying and calculating them in checkout is a separate rollout step.
+- Store policies, verified contact details, real product photography, and fulfillment rules must be reviewed before commercial launch.
+- Never place Supabase service-role keys, merchant secrets, or private credentials in frontend code or public environment variables.
