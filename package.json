@@ -13,7 +13,9 @@
     "vite": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "^0.468.0"
+    "lucide-react":,
+    "@supabase/supabase-js": "^2"
+    "^0.468.0"
   },
   "devDependencies": {}
 }
