@@ -191,3 +191,12 @@ main .grid article.product .productinfo>small{color:#815b18!important;font-size:
 main .grid article.product .productinfo h3{color:#101828!important;font-size:16px!important;font-weight:900!important;line-height:1.5!important}
 main .grid article.product .productinfo p{color:#344054!important;font-size:14px!important;font-weight:600!important;line-height:1.6!important;min-height:42px!important}
 main .grid article.product .productinfo .price b{color:#101828!important;font-weight:900!important}
+
+/* FIVE GEN product gallery: every photo stays inside a premium frame */
+main .grid article.product{background:#fff!important;border:1px solid #e5eaf1!important;border-radius:16px!important;overflow:hidden!important;box-shadow:0 5px 18px rgba(16,39,71,.07)!important}
+main .grid article.product .productvisual{box-sizing:border-box!important;width:calc(100% - 20px)!important;height:auto!important;aspect-ratio:1/1!important;margin:10px 10px 0!important;padding:9px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;border:2px solid #c7a45b!important;border-radius:13px!important;background:linear-gradient(145deg,#f8f9fc,#eef2f7)!important}
+main .grid article.product .productvisual img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;padding:0!important;border-radius:7px!important}
+main .grid article.product .productvisual .emoji{font-size:68px!important}
+main .grid article.product .productinfo{padding:13px 14px 16px!important;background:#fff!important;text-align:left!important}
+main .grid article.product .productinfo h3{display:block!important;margin:2px 0 7px!important;color:#101828!important;font-size:16px!important;font-weight:900!important;line-height:1.45!important}
+@media(max-width:600px){main .grid article.product .productvisual{width:calc(100% - 16px)!important;margin:8px 8px 0!important;padding:7px!important}main .grid article.product .productinfo{padding:11px 11px 14px!important}main .grid article.product .productinfo h3{font-size:14px!important}}
