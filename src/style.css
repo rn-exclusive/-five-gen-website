@@ -223,3 +223,10 @@ main .grid article.product .add:disabled{background:#68758a!important;color:#fff
 .accountMenuLinks button,.accountMenuLinks a{display:flex;align-items:center;gap:12px;width:100%;padding:13px 14px;border:0;border-bottom:1px solid #edf0f4;background:#fff;color:#172b49;text-align:left;text-decoration:none;font:700 14px 'Hind Siliguri',sans-serif;border-radius:7px}
 .accountMenuLinks button:active,.accountMenuLinks a:active{background:#f4f6fa}
 @media(min-width:801px){.accountMenuLinks{top:82px;left:max(5%,calc((100% - 1180px)/2))}}
+
+/* Hamburger opens the customer menu from the top-left */
+@media(max-width:800px){
+ .nav:has(.accountMenuLinks){display:flex!important;position:absolute;top:70px;left:0;right:0;z-index:12;flex-direction:column;align-items:stretch;gap:0;padding:10px 14px;background:#fff;box-shadow:0 12px 25px #10274720}
+ .nav:has(.accountMenuLinks)>button,.nav:has(.accountMenuLinks)>a{padding:12px;text-align:left;border-bottom:1px solid #edf0f4}
+ .accountMenuLinks{position:static;width:100%;padding:6px 0;border:0;box-shadow:none}
+}
