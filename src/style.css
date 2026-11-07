@@ -36,3 +36,7 @@
  .printPreview .printSheet{display:block!important;position:static!important;width:100%!important;border:0!important;padding:0!important;margin:0!important}
  .printPreview .printSheet *{visibility:visible!important;color:#111!important}
 }
+
+/* Consistent Bengali typography for order date and print copy */
+.printSheet,.printSheet *{font-family:'Hind Siliguri',sans-serif!important;font-synthesis:none}
+.printSheet p:first-of-type,.printSheet p:nth-of-type(2){font-family:'Hind Siliguri',sans-serif!important;font-size:14px;line-height:1.8;letter-spacing:0}
