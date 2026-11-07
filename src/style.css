@@ -254,3 +254,17 @@ header{position:relative;z-index:22}
 .accountTrack .goldbtn{width:100%;border:0;font:700 14px 'Hind Siliguri',sans-serif}
 
 @media(max-width:640px){.contactActions{width:100%;margin-top:18px}.contactActions .goldbtn{flex:1;justify-content:center;min-width:145px}}
+
+/* FIVE GEN professional admin dashboard */
+.dashWelcome{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:25px 28px;margin-bottom:20px;border-radius:16px;background:linear-gradient(115deg,#101d35,#203b62);color:#fff;box-shadow:0 12px 28px #101d351c}
+.dashWelcome span{font-size:11px;letter-spacing:1.5px;color:#e4c27c;font-weight:800}
+.dashWelcome h2{font-size:25px;margin:8px 0 5px}.dashWelcome p{margin:0;color:#c8d2e1;font-size:13px}
+.dashWelcome .goldbtn{white-space:nowrap}
+.stats>div{position:relative;overflow:hidden;min-height:130px;border-radius:15px;box-shadow:0 6px 20px #17243b08}
+.stats>div:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-32px;top:-32px;background:#f4e8cf66}
+.stats svg{width:22px;height:22px}.stats small{font-size:12px;font-weight:700}.stats b{font-size:27px;color:#172744}.stats em{font-style:normal;color:#9aa3b1;font-size:11px}
+.dashGrid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}.dashGrid .adminCard{min-width:0}
+.statusTiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.statusTiles>div{background:#f6f8fb;border:1px solid #edf0f4;border-radius:10px;padding:14px 10px}.statusTiles b{display:block;font-size:23px;color:#172744}.statusTiles span{font-size:11px;color:#788496}
+.dashStock>p{color:#8a94a3;font-size:12px}.stockAlert{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #edf0f3;font-size:12px}.stockAlert b{color:#a36c17;white-space:nowrap}.stockAlert b.outStock{color:#bd3943}
+.adminCard .cardHead p{margin:4px 0 0}
+@media(max-width:800px){.dashWelcome{align-items:flex-start;flex-direction:column;padding:20px}.dashWelcome .goldbtn{width:100%}.dashGrid{grid-template-columns:1fr}.statusTiles{grid-template-columns:repeat(2,1fr)}}
