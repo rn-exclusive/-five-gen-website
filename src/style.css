@@ -236,3 +236,12 @@ main .grid article.product .add:disabled{background:#68758a!important;color:#fff
 .nav:has(.accountMenuLinks){position:relative!important;z-index:20!important}
 .nav:has(.accountMenuLinks) .accountMenuLinks{z-index:21!important;position:relative!important}
 header{position:relative;z-index:22}
+
+/* Product typography editor */
+.textStyleEditor{padding:15px;border:1px solid #d9c18b;border-radius:12px;background:#fbfaf6;display:grid;gap:10px}
+.textStyleEditor h4{margin:2px 0;color:#172b49;font-size:14px}
+.styleControls{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.styleControls label{display:flex;align-items:center;gap:7px;color:#27364b;font-size:13px;font-weight:700}
+.styleControls input[type=color]{width:42px;height:34px;padding:2px;border:1px solid #d4dbe5;border-radius:7px;background:#fff}
+.styleControls select{padding:8px;border:1px solid #cbd3df;border-radius:7px;background:#fff;color:#17243b}
+.styleLivePreview{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;background:#fff;border:1px dashed #c7a45b;border-radius:9px;min-height:48px}
