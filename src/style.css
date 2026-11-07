@@ -230,3 +230,9 @@ main .grid article.product .add:disabled{background:#68758a!important;color:#fff
  .nav:has(.accountMenuLinks)>button,.nav:has(.accountMenuLinks)>a{padding:12px;text-align:left;border-bottom:1px solid #edf0f4}
  .accountMenuLinks{position:static;width:100%;padding:6px 0;border:0;box-shadow:none}
 }
+
+/* Tap anywhere outside the hamburger menu to dismiss it */
+.menuDismiss{position:fixed!important;inset:0!important;z-index:19!important;width:100vw!important;height:100vh!important;border:0!important;border-radius:0!important;background:rgba(15,28,48,.16)!important;cursor:default!important}
+.nav:has(.accountMenuLinks){position:relative!important;z-index:20!important}
+.nav:has(.accountMenuLinks) .accountMenuLinks{z-index:21!important;position:relative!important}
+header{position:relative;z-index:22}
