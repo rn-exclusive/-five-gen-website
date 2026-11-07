@@ -166,3 +166,14 @@
 .sizePicker select{flex:1;min-width:0;padding:9px 10px;border:1px solid #c9a85b;border-radius:8px;background:#fff;color:#172b49}
 .product .add:disabled{opacity:.45;cursor:not-allowed}
 .cartSize{color:#9a742e;font-weight:700}
+
+/* Improve product title and description readability below product photos */
+.productinfo{background:#fff!important}
+.productinfo>small{color:#8a6425!important;font-weight:700!important}
+.productinfo h3{color:#14243b!important;font-weight:800!important;line-height:1.4!important}
+.productinfo p{color:#465367!important;font-size:13px!important;font-weight:500!important;line-height:1.55!important;opacity:1!important}
+@media(max-width:600px){
+ .productinfo{padding:13px!important}
+ .productinfo h3{font-size:14px!important}
+ .productinfo p{font-size:12px!important;min-height:42px!important}
+}
