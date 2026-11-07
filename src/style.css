@@ -268,3 +268,5 @@ header{position:relative;z-index:22}
 .dashStock>p{color:#8a94a3;font-size:12px}.stockAlert{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #edf0f3;font-size:12px}.stockAlert b{color:#a36c17;white-space:nowrap}.stockAlert b.outStock{color:#bd3943}
 .adminCard .cardHead p{margin:4px 0 0}
 @media(max-width:800px){.dashWelcome{align-items:flex-start;flex-direction:column;padding:20px}.dashWelcome .goldbtn{width:100%}.dashGrid{grid-template-columns:1fr}.statusTiles{grid-template-columns:repeat(2,1fr)}}
+
+.reportStats>div{min-height:115px}.reportStats b{font-size:22px}.profitLine{display:flex;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #edf0f3;color:#647084}.profitLine b{color:#172744}.profitTotal{font-weight:800;color:#172744;font-size:16px;border-bottom:0;padding-top:18px}.profitTotal b{font-size:21px;color:#96702f}
