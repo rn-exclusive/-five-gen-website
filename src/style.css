@@ -68,3 +68,55 @@
  .printPreview .printSheet th,.printPreview .printSheet td{padding:4px 6px!important}
  .printPreview .printSheet .printTotal{margin:6px 0!important;font-size:15px!important}
 }
+
+/* Premium FIVE GEN colored invoice theme */
+.printPreview .printSheet{
+ background:#fff!important;color:#17243b!important;
+ border:1.5px solid #d7b66b!important;border-radius:10px!important;
+ box-shadow:0 2px 12px rgba(15,35,65,.08)
+}
+.printPreview .printSheet h1{
+ background:#102747!important;color:#fff!important;
+ padding:10px 14px!important;margin:-1px -1px 5px!important;
+ border-radius:7px 7px 0 0!important;letter-spacing:2px!important;
+ text-align:center!important
+}
+.printPreview .printSheet h2{
+ color:#b38a36!important;text-align:center!important;
+ border-bottom:2px solid #d7b66b!important;padding-bottom:6px!important
+}
+.printPreview .printSheet h3{
+ color:#102747!important;border-left:4px solid #c5a04b!important;
+ background:#f3f6fa!important;padding:4px 8px!important;border-radius:3px!important
+}
+.printPreview .printSheet b{color:#102747!important}
+.printPreview .printSheet hr{border:0!important;border-top:1px solid #dce3ec!important}
+.printPreview .printSheet table{width:100%!important;border:1px solid #d8e0ea!important}
+.printPreview .printSheet th{
+ background:#102747!important;color:#fff!important;
+ border:1px solid #102747!important;text-align:left!important
+}
+.printPreview .printSheet td{
+ border:1px solid #dce3ec!important;color:#24364d!important
+}
+.printPreview .printSheet tbody tr:nth-child(even){background:#f2f6fb!important}
+.printPreview .printSheet .printTotal{
+ color:#102747!important;background:#f7f0df!important;
+ border:1px solid #e3cc91!important;border-radius:5px!important;
+ padding:6px 10px!important;text-align:right!important
+}
+.printPreview .printSheet .printFooter{
+ color:#8b6b2b!important;text-align:center!important;
+ border-top:1px solid #d7b66b!important;padding-top:5px!important
+}
+@media print{
+ .printPreview .printSheet{
+  -webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;
+  border:1.5px solid #d7b66b!important;border-radius:8px!important
+ }
+ .printPreview .printSheet h1{background:#102747!important;color:#fff!important}
+ .printPreview .printSheet h3{background:#f3f6fa!important}
+ .printPreview .printSheet th{background:#102747!important;color:#fff!important}
+ .printPreview .printSheet tbody tr:nth-child(even){background:#f2f6fb!important}
+ .printPreview .printSheet .printTotal{background:#f7f0df!important}
+}
