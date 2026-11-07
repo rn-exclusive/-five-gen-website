@@ -20,15 +20,6 @@
  .printFooter{text-align:center;margin-top:28px!important;color:#555}
 }
 
-/* Fix: isolate order slip in browser print preview */
-@media print{
- html,body,#root{display:block!important;width:100%!important;height:auto!important;min-height:0!important;overflow:visible!important;background:#fff!important}
- body > #root > div{display:block!important;visibility:visible!important;position:static!important}
- body > #root > div > :not(.printSheet){display:none!important}
- body > #root > div > .printSheet{display:block!important;visibility:visible!important;position:static!important;width:100%!important;height:auto!important;max-height:none!important;overflow:visible!important;margin:0!important;padding:0!important;background:#fff!important;color:#111!important}
- .printSheet *{visibility:visible!important;color:#111!important}
-}
-
 /* In-page order preview and reliable print action */
 .printPreview{position:fixed;inset:0;z-index:30;background:#071225bb;display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto}
 .printPreviewCard{background:#fff;width:min(760px,100%);max-height:95vh;overflow:auto;border-radius:12px;padding:18px}
