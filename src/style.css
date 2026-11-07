@@ -244,3 +244,11 @@ header{position:relative;z-index:22}
 .styleControls input[type=color]{width:42px;height:34px;padding:2px;border:1px solid #d4dbe5;border-radius:7px;background:#fff}
 .styleControls select{padding:8px;border:1px solid #cbd3df;border-radius:7px;background:#fff;color:#17243b}
 .styleLivePreview{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;background:#fff;border:1px dashed #c7a45b;border-radius:9px;min-height:48px}
+
+/* Professional stock and order tracking status */
+.stockLabel{display:block;margin:7px 0 2px;color:#667085;font-size:12px;font-weight:700}
+.product .direct:disabled{opacity:.45;cursor:not-allowed}
+.trackResult{display:grid;gap:7px;padding:14px;border:1px solid #d7e2ef;border-radius:10px;background:#f7f9fc;color:#172b49}
+.trackResult strong{display:inline-flex;width:max-content;padding:6px 11px;border-radius:20px;background:#e8f1ff;color:#174b87;font-size:13px}
+.trackResult small{color:#667085}
+.accountTrack .goldbtn{width:100%;border:0;font:700 14px 'Hind Siliguri',sans-serif}
