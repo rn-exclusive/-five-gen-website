@@ -200,3 +200,17 @@ main .grid article.product .productvisual .emoji{font-size:68px!important}
 main .grid article.product .productinfo{padding:13px 14px 16px!important;background:#fff!important;text-align:left!important}
 main .grid article.product .productinfo h3{display:block!important;margin:2px 0 7px!important;color:#101828!important;font-size:16px!important;font-weight:900!important;line-height:1.45!important}
 @media(max-width:600px){main .grid article.product .productvisual{width:calc(100% - 16px)!important;margin:8px 8px 0!important;padding:7px!important}main .grid article.product .productinfo{padding:11px 11px 14px!important}main .grid article.product .productinfo h3{font-size:14px!important}}
+
+/* Cart button: stronger contrast and premium gold outline */
+main .grid article.product .add{
+ background:#142644!important;
+ color:#ffffff!important;
+ -webkit-text-fill-color:#ffffff!important;
+ border:2px solid #c7a45b!important;
+ border-radius:9px!important;
+ font-weight:800!important;
+ box-shadow:0 3px 9px rgba(20,38,68,.14)!important;
+}
+main .grid article.product .add svg{color:#f0c96f!important;stroke:#f0c96f!important}
+main .grid article.product .add:hover{background:#20395f!important;border-color:#e0bd70!important}
+main .grid article.product .add:disabled{background:#68758a!important;color:#fff!important;border-color:#cbd2dc!important}
