@@ -40,3 +40,5 @@
 /* Consistent Bengali typography for order date and print copy */
 .printSheet,.printSheet *{font-family:'Hind Siliguri',sans-serif!important;font-synthesis:none}
 .printSheet p:first-of-type,.printSheet p:nth-of-type(2){font-family:'Hind Siliguri',sans-serif!important;font-size:14px;line-height:1.8;letter-spacing:0}
+
+.orderDateValue{font-family:Manrope,'Hind Siliguri',sans-serif!important;font-size:14px;font-weight:600;letter-spacing:.2px;color:#17243b;white-space:nowrap}
