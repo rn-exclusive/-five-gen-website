@@ -42,3 +42,29 @@
 .printSheet p:first-of-type,.printSheet p:nth-of-type(2){font-family:'Hind Siliguri',sans-serif!important;font-size:14px;line-height:1.8;letter-spacing:0}
 
 .orderDateValue{font-family:Manrope,'Hind Siliguri',sans-serif!important;font-size:14px;font-weight:600;letter-spacing:.2px;color:#17243b;white-space:nowrap}
+
+/* A4 invoice: keep the order copy within the upper half of the page */
+@media print{
+ @page{size:A4 portrait;margin:8mm}
+ .printPreview{width:100%!important}
+ .printPreview .printSheet{
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:136mm!important;
+  min-height:0!important;
+  padding:7mm 9mm!important;
+  margin:0!important;
+  overflow:hidden!important;
+  border:1px solid #bbb!important;
+  font-size:12px!important;
+  line-height:1.35!important;
+ }
+ .printPreview .printSheet h1{font-size:22px!important;margin:0 0 2px!important}
+ .printPreview .printSheet h2{font-size:15px!important;margin:0 0 7px!important}
+ .printPreview .printSheet h3{font-size:14px!important;margin:7px 0 4px!important}
+ .printPreview .printSheet p{font-size:11px!important;line-height:1.4!important;margin:3px 0!important}
+ .printPreview .printSheet hr{margin:6px 0!important}
+ .printPreview .printSheet table{font-size:11px!important;border-collapse:collapse!important}
+ .printPreview .printSheet th,.printPreview .printSheet td{padding:4px 6px!important}
+ .printPreview .printSheet .printTotal{margin:6px 0!important;font-size:15px!important}
+}
