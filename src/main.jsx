@@ -18,6 +18,46 @@ function App(){
  const [cart,setCart]=useState([]),[cat,setCat]=useState(cats[0]),[query,setQuery]=useState(''),[drawer,setDrawer]=useState(false),[menuOpen,setMenuOpen]=useState(false),[checkout,setCheckout]=useState(false),[lang,setLang]=useState('bn');
  const [notice,setNotice]=useState(''),[form,setForm]=useState({name:'',phone:'',district:'',thana:'',fullAddress:''}),[editing,setEditing]=useState(null),[adminTab,setAdminTab]=useState('overview'),[printOrder,setPrintOrder]=useState(null);
  const [email,setEmail]=useState(''),[password,setPassword]=useState(''),[authError,setAuthError]=useState(''),[recoveryMode,setRecoveryMode]=useState(new URLSearchParams(location.hash.slice(1)).get('type')==='recovery'),[newPassword,setNewPassword]=useState(''),[confirmPassword,setConfirmPassword]=useState(''),[logged,setLogged]=useState(false),[loading,setLoading]=useState(true),[busy,setBusy]=useState(false),[messenger,setMessenger]=useState('https://m.me/'),[whatsappNumber,setWhatsappNumber]=useState(WA),[deliveryInside,setDeliveryInside]=useState('80'),[deliveryOutside,setDeliveryOutside]=useState('130'),[settingsBusy,setSettingsBusy]=useState(false),[trackResult,setTrackResult]=useState(null),[trackLoading,setTrackLoading]=useState(false),[lastOrderId,setLastOrderId]=useState('');
+
+ useEffect(()=>{const root=document.getElementById('root');if(!root)return;const bnToEn={
+ 'সারা বাংলাদেশে ডেলিভারি সুবিধা • নতুন কালেকশন দেখুন':'Delivery across Bangladesh • Explore our new collection',
+ 'ফাইভ জেন · YOUR WORLD, ONE STORE':'FIVE GEN · YOUR WORLD, ONE STORE',
+ 'পণ্য খুঁজুন...':'Search products...',
+ 'কার্ট':'Cart','যোগাযোগ':'Contact','এখনই শপিং করুন':'Shop Now',
+ 'আপনার পছন্দ,':'Your Choice,','আমাদের অগ্রাধিকার।':'Our Priority.',
+ 'মানসম্মত পণ্য, সাশ্রয়ী দাম এবং সহজ অনলাইন শপিং—সব এক জায়গায়।':'Quality products, great prices and easy online shopping—all in one place.',
+ 'দ্রুত ডেলিভারি':'Fast Delivery','সারা বাংলাদেশে':'Across Bangladesh',
+ 'নিরাপদ শপিং':'Secure Shopping','বিশ্বস্ত কেনাকাটা':'Trusted Shopping',
+ 'সেরা দাম':'Best Prices','দারুণ সব অফার':'Great Deals',
+ 'কাস্টমার সাপোর্ট':'Customer Support','আপনার পাশে আছি':'Here to Help',
+ 'জনপ্রিয় পণ্য':'Popular Products','আপনার পছন্দের পণ্যটি খুঁজে নিন':'Find the products you love',
+ 'সব পণ্য':'All Products','ইলেকট্রনিক্স':'Electronics','ফ্যাশন':'Fashion','হোম & লিভিং':'Home & Living','বিউটি':'Beauty','অন্যান্য':'Other',
+ 'সাইজ নির্বাচন':'Select Size','সাইজ বেছে নিন':'Choose a size',
+ 'স্টক শেষ':'Out of Stock','কার্টে যোগ করুন':'Add to Cart','সরাসরি অর্ডার':'Order Now',
+ 'স্টক: ':'Stock: ',' টি':' left','এই মুহূর্তে স্টক নেই':'Currently unavailable',
+ 'এখনো কোনো পণ্য যোগ করা হয়নি।':'No products have been added yet.',
+ 'ডেটাবেস সংযোগ সেটআপ করা হয়নি।':'Database connection is not configured.',
+ 'কেন FIVE GEN?':'Why FIVE GEN?','সহজ কেনাকাটা, স্বচ্ছ তথ্য এবং ক্রেতার সন্তুষ্টিকে গুরুত্ব দিয়ে আমাদের যাত্রা।':'We focus on easy shopping, transparent information and customer satisfaction.',
+ 'মানসম্মত পণ্য':'Quality Products','সহজ অর্ডার প্রক্রিয়া':'Easy Ordering','সহায়ক কাস্টমার সার্ভিস':'Helpful Customer Service',
+ 'কোনো প্রশ্ন আছে?':'Have a question?','পণ্য, অর্ডার বা ডেলিভারি সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।':'Contact us about products, orders or delivery.',
+ 'WhatsApp-এ যোগাযোগ':'Contact on WhatsApp','Messenger-এ যোগাযোগ':'Contact on Messenger',
+ 'আপনার কার্ট':'Your Cart','আপনার কার্ট এখনো খালি।':'Your cart is empty.',
+ 'সর্বমোট':'Total','অর্ডার সম্পন্ন করুন':'Complete Your Order',
+ 'আপনার যোগাযোগ ও ডেলিভারির তথ্য দিন।':'Enter your contact and delivery details.',
+ 'আপনার নাম':'Your Name','নাম লিখুন':'Enter your name','মোবাইল নম্বর':'Mobile Number',
+ 'জেলা':'District','আপনার জেলার নাম লিখুন':'Enter your district',
+ 'থানা':'Thana / Sub-district','আপনার থানা/উপজেলার নাম লিখুন':'Enter your thana / upazila',
+ 'সম্পূর্ণ ঠিকানা':'Full Address','বাড়ি/রোড, এলাকা, পোস্ট কোড ইত্যাদি লিখুন':'House/road, area, postal code, etc.',
+ 'পেমেন্ট পদ্ধতি / Payment Method':'Payment Method','পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন।':'Pay when you receive your order.',
+ 'bKash / Nagad অনলাইন পেমেন্ট শিগগিরই চালু হবে।':'bKash / Nagad online payment will be available soon.',
+ 'অর্ডার কনফার্ম করুন':'Confirm Order','অর্ডার জমা হচ্ছে...':'Submitting order...',
+ 'কার্টে ফিরে যান':'Back to Cart','শপিং-এ ফিরুন':'Return to Shopping',
+ 'অর্ডারের অবস্থা দেখুন':'Check Order Status','খোঁজা হচ্ছে...':'Searching...',
+ 'অর্ডার পাওয়া যায়নি। ID ও মোবাইল নম্বর যাচাই করুন।':'Order not found. Please check the ID and mobile number.',
+ 'আপনার পছন্দের পণ্য Wishlist-এ সংরক্ষণ করুন।':'Save products you like to your wishlist.',
+ 'আমাদের কাস্টমার সাপোর্ট আপনার পাশে আছে।':'Our customer support is here to help.',
+ 'নতুন পণ্য যোগ করুন':'Add New Product','সব অর্ডার দেখুন':'View All Orders'
+};const enToBn=Object.fromEntries(Object.entries(bnToEn).map(([a,b])=>[b,a]));const translateNode=node=>{if(node.nodeType===Node.TEXT_NODE){if(!node.__fiveGenOriginal)node.__fiveGenOriginal=node.nodeValue;const original=node.__fiveGenOriginal;const key=original.trim();const translated=(lang==='en'?bnToEn[key]:enToBn[key]);if(translated!==undefined)node.nodeValue=original.replace(key,translated);else if(lang==='en'&&key.startsWith('স্টক: '))node.nodeValue=original.replace('স্টক: ','Stock: ').replace(' টি',' left');else if(lang==='bn'&&key.startsWith('Stock: '))node.nodeValue=original.replace('Stock: ','স্টক: ').replace(' left',' টি');}else if(node.nodeType===Node.ELEMENT_NODE){for(const attr of ['placeholder','aria-label','title']){const value=node.getAttribute(attr);if(value){const translated=(lang==='en'?bnToEn[value]:enToBn[value]);if(translated!==undefined)node.setAttribute(attr,translated);}}node.childNodes.forEach(translateNode);}};translateNode(root);const observer=new MutationObserver(records=>records.forEach(record=>{record.addedNodes?.forEach(translateNode);if(record.type==='characterData')translateNode(record.target);if(record.type==='attributes')translateNode(record.target);}));observer.observe(root,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['placeholder','aria-label','title']});return()=>observer.disconnect();},[lang]);
  const toast=t=>{setNotice(t);window.setTimeout(()=>setNotice(''),2800)};const toggleWish=p=>setWishlist(old=>{const next=old.includes(p.id)?old.filter(id=>id!==p.id):[...old,p.id];localStorage.setItem('fivegen-wishlist',JSON.stringify(next));return next});
  const refreshProducts=async()=>{if(!supabase)return;const{data,error}=await supabase.from('products').select('*').eq('active',true).order('created_at',{ascending:false});if(error){toast('পণ্য লোড হয়নি: '+error.message);return}setProducts((data||[]).map(mapProduct))};
  const refreshOrders=async()=>{if(!supabase)return;const{data,error}=await supabase.from('orders').select('*').order('created_at',{ascending:false});if(error){toast('অর্ডার লোড হয়নি: '+error.message);return}setOrders((data||[]).map(mapOrder))};const refreshExpenses=async()=>{if(!supabase)return;const{data,error}=await supabase.from('store_expenses').select('*').order('expense_date',{ascending:false}).limit(500);if(error){toast('খরচের তথ্য লোড হয়নি: '+error.message);return}setExpenses(data||[])};const addExpense=async()=>{const amount=Number(expenseForm.amount);if(!expenseForm.expense_date||!expenseForm.description.trim()||!Number.isFinite(amount)||amount<=0){toast('তারিখ, বিবরণ ও সঠিক খরচ লিখুন');return}setBusy(true);try{const{error}=await supabase.from('store_expenses').insert({...expenseForm,description:expenseForm.description.trim(),amount});if(error)throw error;setExpenseForm({...expenseForm,description:'',amount:''});await refreshExpenses();toast('খরচ সংরক্ষণ হয়েছে');}catch(e){toast('খরচ সংরক্ষণ হয়নি: '+(e.message||''));}finally{setBusy(false)}};
