@@ -177,3 +177,17 @@
  .productinfo h3{font-size:14px!important}
  .productinfo p{font-size:12px!important;min-height:42px!important}
 }
+
+/* High-contrast product card typography */
+main .grid article.product .productinfo,
+main .grid article.product .productinfo *{
+ color:#101828!important;
+ opacity:1!important;
+ visibility:visible!important;
+ -webkit-text-fill-color:currentColor!important;
+ text-shadow:none!important;
+}
+main .grid article.product .productinfo>small{color:#815b18!important;font-size:12px!important;font-weight:800!important}
+main .grid article.product .productinfo h3{color:#101828!important;font-size:16px!important;font-weight:900!important;line-height:1.5!important}
+main .grid article.product .productinfo p{color:#344054!important;font-size:14px!important;font-weight:600!important;line-height:1.6!important;min-height:42px!important}
+main .grid article.product .productinfo .price b{color:#101828!important;font-weight:900!important}
